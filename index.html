@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Recipe Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Interactive Recipe Finder</h1>
+    <p>Enter the ingredients you have and get recipe suggestions.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <label for="ingredients">Available ingredients (comma separated):</label>
+      <textarea id="ingredients" placeholder="e.g. eggs, milk, flour, tomato"></textarea>
+      <div class="row">
+        <button id="findBtn">Find Recipes</button>
+        <label for="minMatch">Min match %: <span id="minVal">0</span>%</label>
+        <input id="minMatch" type="range" min="0" max="100" value="0" />
+      </div>
+    </section>
+
+    <section id="results" class="grid"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="close">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">Project: Interactive Recipe Finder • Static frontend demo</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

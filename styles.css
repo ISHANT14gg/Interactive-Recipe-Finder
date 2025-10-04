@@ -1,0 +1,35 @@
+:root{
+    --accent: #ff6b6b;
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --muted: #666;
+    --maxw: 1100px;
+  }
+  *{box-sizing:border-box}
+  body{font-family:Inter, system-ui, Arial, sans-serif; margin:0; background:var(--bg); color:#222}
+  .hero{background: linear-gradient(135deg,#fff 0%, #f1f6ff 100%); padding:28px 16px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.04)}
+  .container{max-width:var(--maxw); margin:24px auto; padding:0 16px}
+  .controls{background:var(--card); padding:16px; border-radius:10px; box-shadow:0 6px 18px rgba(17,24,39,0.04); margin-bottom:18px}
+  .controls textarea{width:100%; min-height:70px; padding:10px; border-radius:6px; border:1px solid #e6e9ef; resize:vertical}
+  .row{display:flex; align-items:center; gap:12px; margin-top:10px}
+  button{background:var(--accent); color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer}
+  button:hover{filter:brightness(.95)}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+  .card{background:var(--card); padding:12px; border-radius:10px; box-shadow:0 6px 18px rgba(17,24,39,0.04); display:flex; flex-direction:column; gap:8px}
+  .card img{width:100%; height:140px; object-fit:cover; border-radius:8px}
+  .meta{display:flex; justify-content:space-between; font-size:14px; color:var(--muted)}
+  .badge{background:#eef; padding:6px 8px; border-radius:8px; font-weight:600; color:#224}
+  .small{font-size:13px; color:var(--muted)}
+  
+  /* Modal */
+  .modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.35); padding:20px;}
+  .modal[aria-hidden="false"]{display:flex}
+  .modal-content{background:var(--card); border-radius:10px; max-width:900px; width:100%; padding:18px; max-height:90vh; overflow:auto; position:relative}
+  .close{position:absolute; right:10px; top:8px; background:none; border:none; font-size:22px; cursor:pointer}
+  
+  /* footer */
+  .footer{margin:20px auto; text-align:center; color:var(--muted)}
+  
+  /* responsive tweaks */
+  @media (max-width:460px){ .row{flex-direction:column; align-items:stretch} .card img{height:120px} }
+  
